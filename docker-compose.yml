@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: .
+      args:
+        - APP_NAME=${APP_NAME}
+    image: 'calculator-api:latest'
+    environment:
+      - APP_NAME=${APP_NAME}
+    env_file:
+      - .env
